@@ -247,12 +247,71 @@ html(lang="ru")
                     |испытаний и бессонных ночей!
                 .slider__info-btns
                   a.iconend-link Посмотреть сайт
-      .triangles
-        svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-          polygon(points="0,0 1000,0 0,100")
-        svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-          polygon(points="0,0 1000,0 1000,100")
-                
+        .triangles.triangles_budda
+          svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 1000,0 1000,100")
+          svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,0")
+      .budda-section
+        section.reviews
+          .container.reviews__container
+            .reviews__desc
+              .reviews__header
+                .reviews__title Что обо мне говорят
+                .reviews__btns
+                  .reviews__btn
+                    a.reviews__btn-link
+                      +icon('arrow-down', 'reviews__btn-icon')
+                  .reviews__btn
+                    a.reviews__btn-link
+                      +icon('arrow-down', 'reviews__btn-icon')
+              .reviews__slider
+                ul.reviews__slider-list
+                  li.reviews__slider-item
+                    .reviews__slider-icon
+                      +icon('quote', 'reviews-quote')
+                    .reviews__block
+                      .reviews__text
+                        |Этот парень проходил обучение
+                        br 
+                        |веб-разработке не где-то, а в LoftSchool! 
+                        br 
+                        |4,5 месяца только самых тяжелых 
+                        br 
+                        |испытаний и бессонных ночей!
+                      .reviews__username-block
+                        .reviews__username
+                          .avatar
+                            +image('content/kov.jpg', "avatar-image")
+                        .reviews__username-desc
+                          .reviews__username-title Дмитрий Ковальчук
+                          .reviews__username-position основатель Loftschool
+                  li.reviews__slider-item
+                    .reviews__slider-icon
+                      +icon('quote', 'reviews-quote')
+                    .reviews__block
+                      .reviews__text
+                        |Этот парень проходил обучение
+                        br 
+                        |веб-разработке не где-то, а в LoftSchool! 
+                        br 
+                        |4,5 месяца только самых тяжелых 
+                        br 
+                        |испытаний и бессонных ночей!
+                      .reviews__username-block
+                        .reviews__username
+                          .avatar
+                            +image('content/sub.jpg', "avatar-image")
+                        .reviews__username-desc
+                          .reviews__username-title Владимир Сабанцев
+                          .reviews__username-position преподаватель
+        section.form
+          .container.form__container
+
+            
+
+
+
 
 
 
