@@ -45,27 +45,214 @@ html(lang="ru")
               a.scroll-btn Скролл
               +icon('scroll', 'scroll-icon')  
         section.about
-          .container.about__container
-            .about__left
-              .user
-                .user__avatar
-                  .avatar
-                    +image('content/avatar.jpg', "avatar__image")
-                .user__text
-                  - rows = [["Проживаю", "Новосибирск"], ["Возраст", "27 лет"], ["Родился", "1 января"]];
+          .container
+            .about__container
+              .about__left
+                .user
+                  .user__avatar
+                    .avatar
+                      +image('content/avatar.jpg', "avatar__image")
+                  .user__text
+                    - rows = [["Проживаю", "Брест"], ["Возраст", "32 года"], ["Родился", "13 апреля"]];
 
-                  table.user__data
-                    table.user__data-table
-                      each row in rows
-                        tr.user__data-row
-                          each cell in row
-                            td #{cell}
+                    table.user__data
+                      table.user__data-table
+                        each row in rows
+                          tr.user__data-row
+                            each cell in row
+                              td.user__data-cell #{cell}
+              
+              .about__right
+                .about__welcome-text Привет, меня зовут
+                .about__username Евгений Струневский
+                .about__desc 
+                  |Я занимаюсь разработкой современных сайтов и приложений. 
+                  br
+                  |Мне нравится делать интересные и современные проекты.
+                .about__ps
+                  |Этот сайт я сделал в рамках обучения в Школе онлайн образования 
+                  br
+                  |LoftSchool. Чуть позже я освежу в нём свой контент. 
+                  br
+                  |А пока посмотрите, как тут всё классно и красиво!
+      section.value
+          .triangles
+            svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,0 0,100 1000,100")
+            svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="1000,0 1000,100 0,100")
+
+          .container.value__container  
             
-            .about__right
-              .about__welcome__text Привет, меня зовут
-              .about__username Евгений Струневский
-              .about__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-              .about__ps
+            .value__bag
+              .value__bag-container
+                .value__bag-image
+                  +image('content/Рюкзак.png', "avatar__image")
+            
+            .values__content
+              .values__title
+                .values__title-text Чем я могу быть полезен вам
+                .values__title-subtext
+                  |Этот сайт я сделал в рамках обучения в Школе онлайн образования  
+                  br
+                  |LoftSchool. Чуть позже я освежу в нём свой контент. 
+                  br
+                  |А пока посмотрите, как тут всё классно и красиво!
+              ul.skills-graphic
+                li.skills-graphic__title Frontend
+                  ul.skills__row
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title html
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title css
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title javaScript
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title jquery и vue.js
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                li.skills-graphic__title Frontend
+                  ul.skills__row
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Git
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Terminal
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Gulp
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Webpack
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+      section.works
+        .container.works__container
+          .works__content
+            .works__title Мои работы
+            .slider
+              .slider__display
+                .slider__display-picslider__display-pic
+                  +image('content/site-phone.jpg', ".slider__display-pic-icon")
+                .slider__display-thumbs
+                  ul.slider-thumbs
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_one.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_two.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_three.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_four.png', "slider-thumbs__pic-icon")
+                .slider__buttons
+                a.direction-btns
+                a.direction-btns
+              .slider__info
+                .slider__tags
+                  ul.tags
+                    li.tags__item Html
+                    li.tags__item css
+                    li.tags__item javascript
+                .slider__info-text
+                  h3.slider__info-title
+                    |Сайт школы 
+                    |образования
+                  .slider__info-desc
+                    |Этот парень проходил обучение 
+                    br
+                    |веб-разработке не где-то, а в LoftSchool! 
+                    br
+                    |2 месяца только самых тяжелых 
+                    br
+                    |испытаний и бессонных ночей!
+                .slider__info-btns
+                  a.iconend-link Посмотреть сайт
+      .triangles
+        svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+          polygon(points="0,0 1000,0 0,100")
+        svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+          polygon(points="0,0 1000,0 1000,100")
+                
 
 
 
