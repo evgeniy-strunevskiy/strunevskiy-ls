@@ -16,18 +16,25 @@ html(lang="ru")
               .hero__logo
                 .logo СЕ
               .hero__menu
-                - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"];
-                  nav.menu
-                    ul.menu__items
-                      each item in menu
-                        li.menu__item
-                          a.menu__link #{item}
+                ul.nav__list
+                  li.nav__item
+                    a.nav__link(href="#") Главная
+                  li.nav__item
+                    a.nav__link(href="#") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#") Навыки
+                  li.nav__item
+                    a.nav__link(href="#") Работы
+                  li.nav__item
+                    a.nav__link(href="#") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#") Связаться
               .hero__links
                 - var icons = ["insta", "vk", "github"]
                 ul.socials
                   each item in icons
                     li.socials__item
-                      a.socials__link
+                      a.socials__link(href="#" id="")
                         +icon(item, "socials__icon")
 
             .hero__content
@@ -246,6 +253,7 @@ html(lang="ru")
                     br
                     |испытаний и бессонных ночей!
                 .slider__info-btns
+                  +icon('link', 'slider__info-link')
                   a.iconend-link Посмотреть сайт
         .triangles.triangles_budda
           svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
@@ -305,8 +313,75 @@ html(lang="ru")
                         .reviews__username-desc
                           .reviews__username-title Владимир Сабанцев
                           .reviews__username-position преподаватель
-        section.form
-          .container.form__container
+        section.relations
+          .container.relations__container
+            .form__name Связаться со мной
+            .form__desc
+              form.form
+                  .form__row
+                      label.form__label
+                          .form__title Введите ваше имя
+                          input.form__input(placeholder = "Ковальчук Дмитрий" type="text"  required)
+                          +icon('user', 'form-user__icon')
+                      label.form__label
+                          .form__title Введите ваш email
+                          input.form__input(placeholder = "loftschool@study.com" type="email" required)
+                          +icon('envelope', 'form-user__icon')
+                  .form__row
+                      label.form__label
+                          .form__title Сообщение к письму
+                          textarea.form__textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
+                          +icon('message', 'form-mess__icon')
+                  button.form__btn-submit(type="submit") Отправить
+      footer.footer
+        .container.footer__container
+          .footer__date © 2019
+          .footer__user
+            .footer__username 
+              |Евгений
+              br 
+              |Струневский
+            .footer__username-text 
+              |Личный сайт 
+              br
+              |веб разработчика
+          .footer__desc
+            .footer__menu
+                ul.nav__list
+                  li.nav__item
+                    a.nav__link(href="#") Главная
+                  li.nav__item
+                    a.nav__link(href="#") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#") Навыки
+                  li.nav__item
+                    a.nav__link(href="#") Работы
+                  li.nav__item
+                    a.nav__link(href="#") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#") Связаться
+            .footer__desccontent
+              .footer__desccontent-left
+                .footer__desccontent-text
+                  |Этот сайт я сделал в рамках обучения 
+                  br
+                  |в Школе онлайн образования
+                .social.social_footer 
+                  .social__links
+                    - var icons = ["insta", "vk", "github"]
+                    ul.socials
+                      each item in icons
+                        li.socials__item
+                          a.socials__link
+                            +icon(item, "socials__icon_gray")
+              .footer__desccontent-right
+                .footer__desccontent-quote
+                  |Всегда пишите код так, будто сопровождать его будет 
+                  br
+                  |склонный к насилию психопат, который знает где вы живете
+                .footer__descontent-author
+                  |Martin Golding
+
 
             
 

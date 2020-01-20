@@ -19,6 +19,15 @@
   right: 70px;
 }
 
+.slider-thumbs__pic-icon {
+  margin: -1px;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid orange;
+  }
+}
+
 .tags {
   display: flex;
   padding-bottom: 48px;
@@ -49,9 +58,38 @@
   padding-bottom: 50px;
 }
 
+.slider__info-btns {
+  display: flex;
+  align-items: center;
+
+}
+
+.slider__info-link {
+  width: 15px;
+  height: 15px;
+  fill: #586ed3;
+  margin: 20px;
+
+  &:hover {
+    fill: orange;
+  }
+
+  &:active {
+    fill: red;
+  }
+}
+
 .iconend-link {
   color: #4d71d7;
   font-size: 18px;
   font-weight: 700;
   line-height: 48px;
+
+  &:hover {
+    color: orange;
+  }
+
+  &:active {
+    color: red;
+  }
 }
