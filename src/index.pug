@@ -14,7 +14,8 @@ html(lang="ru")
           .container.hero__container
             header.header.hero__header
               .hero__logo
-                .logo СЕ
+                .logo 
+                  +image('content/logo.png', 'logo-pic')
               .hero__menu
                 ul.nav__list
                   li.nav__item
@@ -52,22 +53,23 @@ html(lang="ru")
               a.scroll-btn Скролл
               +icon('scroll', 'scroll-icon')  
         section.about
-          .container
-            .about__container
+          .container.about__container
+            .about__content
               .about__left
                 .user
                   .user__avatar
                     .avatar
                       +image('content/avatar.jpg', "avatar__image")
                   .user__text
-                    - rows = [["Проживаю", "Брест"], ["Возраст", "32 года"], ["Родился", "13 апреля"]];
-
-                    table.user__data
-                      table.user__data-table
-                        each row in rows
-                          tr.user__data-row
-                            each cell in row
-                              td.user__data-cell #{cell}
+                    .user__table
+                      .user__col
+                        .user__cell Возраст
+                        .user__cell Проживаю
+                        .user__cell Родился
+                      .user__col.user__col_right
+                        .user__cell Брест
+                        .user__cell 32 года
+                        .user__cell 13 апреля
               
               .about__right
                 .about__welcome-text Привет, меня зовут

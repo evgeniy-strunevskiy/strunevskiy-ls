@@ -1,4 +1,3 @@
-
 .user__avatar {
   width: 200px;
   height: 200px;
@@ -16,7 +15,7 @@
 }
 
 .user__text {
-  padding-top: 75px;
+  padding-top: 65px;
 }
 
 .user-info__desc {
@@ -38,6 +37,30 @@
   line-height: 60px;
 }
 
-.user__data-row {
-  font-weight: 900;
+.user__table {
+  display: flex;
+}
+
+.user__value {
+  margin-left: 20px;
+}
+
+.user__col {
+  padding-right: 104px;
+
+  &_right {
+    font-weight: bold;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.user__cell {
+  padding-bottom: 22px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
