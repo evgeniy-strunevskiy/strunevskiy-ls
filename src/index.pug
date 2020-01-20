@@ -117,11 +117,7 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title html
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
+
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -129,11 +125,7 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title css
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
+
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -141,11 +133,6 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title javaScript
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -153,10 +140,7 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title jquery и vue.js
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
+
                 li.skills-graphic__title Frontend
                   ul.skills__row
                     li.skills__item
@@ -166,11 +150,6 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title Git
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -178,11 +157,7 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title Terminal
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
+
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -190,11 +165,6 @@ html(lang="ru")
                               circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
                           .skill__title Gulp
 
-                      // Градиент
-                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
-                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                              stop(offset="0%" stop-color='#4a00ed')
-                              stop(offset="100%" stop-color='#9300e8') 
                     li.skills__item
                       .skill
                           svg(viewBox="0 0 200 200").skill__svg-shape
@@ -213,7 +183,7 @@ html(lang="ru")
             .works__title Мои работы
             .slider
               .slider__display
-                .slider__display-picslider__display-pic
+                .slider__display-pic
                   +image('content/site-phone.jpg', ".slider__display-pic-icon")
                 .slider__display-thumbs
                   ul.slider-thumbs
@@ -234,8 +204,10 @@ html(lang="ru")
                         .slider-thumbs__pic
                           +image('content/thumb_four.png', "slider-thumbs__pic-icon")
                 .slider__buttons
-                a.direction-btns
-                a.direction-btns
+                  a.direction-btns
+                    +image('content/arrow-down.png', "direction-btns-pic")
+                  a.direction-btns
+                    +image('content/arrow-down.png', "direction-btns-pic")
               .slider__info
                 .slider__tags
                   ul.tags
@@ -271,10 +243,10 @@ html(lang="ru")
                 .reviews__btns
                   .reviews__btn
                     a.reviews__btn-link
-                      +icon('arrow-down', 'reviews__btn-icon')
+                      +icon('arrow-down', 'reviews__btn-icon-left')
                   .reviews__btn
                     a.reviews__btn-link
-                      +icon('arrow-down', 'reviews__btn-icon')
+                      +icon('arrow-down', 'reviews__btn-icon-right')
               .reviews__slider
                 ul.reviews__slider-list
                   li.reviews__slider-item
