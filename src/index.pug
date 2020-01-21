@@ -14,8 +14,7 @@ html(lang="ru")
           .container.hero__container
             header.header.hero__header
               .hero__logo
-                .logo 
-                  +image('content/logo.png', 'logo-pic')
+                .logo CE
               .hero__menu
                 ul.nav__list
                   li.nav__item
@@ -35,7 +34,7 @@ html(lang="ru")
                 ul.socials
                   each item in icons
                     li.socials__item
-                      a.socials__link(href="#" id="")
+                      a.socials__link(href="#" id="" target="_blank")
                         +icon(item, "socials__icon")
 
             .hero__content
