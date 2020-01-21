@@ -1,0 +1,71 @@
+.skills-graphic {
+  padding-left: 130px;
+}
+
+.skills-graphic__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.skills-graphic__title {
+  padding-bottom: 60px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.skills__row {
+  display: flex;
+
+}
+
+.skill {
+  display: inline-block;
+  position: relative;
+
+  &__svg-shape {
+    width: 168px;
+    fill: transparent;
+  }
+
+  &__svg-circle {
+    &--position-under {
+      fill: transparent;
+      stroke: #e9e9e9;
+      stroke-width: 10PX;
+    }
+
+    &--position-above {
+      stroke-dasharray: 502;
+      stroke-width: 20PX;
+      stroke: url(#gradient);
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
+      animation: skillProgress 100s linear infinite;
+      animation-play-state: paused;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(grey, .5);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@keyframes skillProgress {
+  0% {
+    stroke-dashoffset: 502;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

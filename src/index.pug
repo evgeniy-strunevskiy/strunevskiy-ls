@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -9,8 +9,372 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        h1 Week #1
+      .welcome-section
+        section.hero
+          .container.hero__container
+            header.header.hero__header
+              .hero__logo
+                .logo 
+                  +image('content/logo.png', 'logo-pic')
+              .hero__menu
+                ul.nav__list
+                  li.nav__item
+                    a.nav__link(href="#") Главная
+                  li.nav__item
+                    a.nav__link(href="#") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#") Навыки
+                  li.nav__item
+                    a.nav__link(href="#") Работы
+                  li.nav__item
+                    a.nav__link(href="#") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#") Связаться
+              .hero__links
+                - var icons = ["insta", "vk", "github"]
+                ul.socials
+                  each item in icons
+                    li.socials__item
+                      a.socials__link(href="#" id="")
+                        +icon(item, "socials__icon")
+
+            .hero__content
+              .user-info
+                .user-info__desc 
+                  |Личный сайт 
+                  br
+                  |веб разработчика
+                .user-info__username 
+                  |Евгений
+                  br 
+                  |Струневский
+            
+            .hero__buttons
+              a.scroll-btn Скролл
+              +icon('scroll', 'scroll-icon')  
+        section.about
+          .container.about__container
+            .about__content
+              .about__left
+                .user
+                  .user__avatar
+                    .avatar
+                      +image('content/avatar.jpg', "avatar__image")
+                  .user__text
+                    .user__table
+                      .user__col
+                        .user__cell Возраст
+                        .user__cell Проживаю
+                        .user__cell Родился
+                      .user__col.user__col_right
+                        .user__cell Брест
+                        .user__cell 32 года
+                        .user__cell 13 апреля
+              
+              .about__right
+                .about__welcome-text Привет, меня зовут
+                .about__username Евгений Струневский
+                .about__desc 
+                  |Я занимаюсь разработкой современных сайтов и приложений. 
+                  br
+                  |Мне нравится делать интересные и современные проекты.
+                .about__ps
+                  |Этот сайт я сделал в рамках обучения в Школе онлайн образования 
+                  br
+                  |LoftSchool. Чуть позже я освежу в нём свой контент. 
+                  br
+                  |А пока посмотрите, как тут всё классно и красиво!
+      section.value
+          .triangles
+            svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="0,0 0,100 1000,100")
+            svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+              polygon(points="1000,0 1000,100 0,100")
+
+          .container.value__container  
+            
+            .value__bag
+              .value__bag-container
+                .value__bag-image
+                  +image('content/Рюкзак.png', "avatar__image")
+            
+            .values__content
+              .values__title
+                .values__title-text Чем я могу быть полезен вам
+                .values__title-subtext
+                  |Этот сайт я сделал в рамках обучения в Школе онлайн образования  
+                  br
+                  |LoftSchool. Чуть позже я освежу в нём свой контент. 
+                  br
+                  |А пока посмотрите, как тут всё классно и красиво!
+              ul.skills-graphic
+                li.skills-graphic__title Frontend
+                  ul.skills__row
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title html
+
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title css
+
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title javaScript
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title jquery и vue.js
+
+
+                li.skills-graphic__title Frontend
+                  ul.skills__row
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Git
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Terminal
+
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Gulp
+
+                    li.skills__item
+                      .skill
+                          svg(viewBox="0 0 200 200").skill__svg-shape
+                              circle(cx="100" cy="100" r="80").skill__svg-circle--position-under
+                              circle(cx="100" cy="100" r="80" style=`animation-delay: -50s`).skill__svg-circle--position-above
+                          .skill__title Webpack
+
+                      // Градиент
+                      svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                          linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                              stop(offset="0%" stop-color='#4a00ed')
+                              stop(offset="100%" stop-color='#9300e8') 
+      section.works
+        .container.works__container
+          .works__content
+            .works__title Мои работы
+            .slider
+              .slider__display
+                .slider__display-pic
+                  +image('content/site-phone.jpg', ".slider__display-pic-icon")
+                .slider__display-thumbs
+                  ul.slider-thumbs
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_one.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_two.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_three.png', "slider-thumbs__pic-icon")
+                    li.slider-thumbs__link
+                      a.slider-thumbs__link
+                        .slider-thumbs__pic
+                          +image('content/thumb_four.png', "slider-thumbs__pic-icon")
+                .slider__buttons
+                  a.direction-btns
+                    +image('content/arrow-down.png', "direction-btns-pic")
+                  a.direction-btns
+                    +image('content/arrow-down.png', "direction-btns-pic")
+              .slider__info
+                .slider__tags
+                  ul.tags
+                    li.tags__item Html
+                    li.tags__item css
+                    li.tags__item javascript
+                .slider__info-text
+                  h3.slider__info-title
+                    |Сайт школы 
+                    |образования
+                  .slider__info-desc
+                    |Этот парень проходил обучение 
+                    br
+                    |веб-разработке не где-то, а в LoftSchool! 
+                    br
+                    |2 месяца только самых тяжелых 
+                    br
+                    |испытаний и бессонных ночей!
+                .slider__info-btns
+                  +icon('link', 'slider__info-link')
+                  a.iconend-link Посмотреть сайт
+        .triangles.triangles_budda
+          svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 1000,0 1000,100")
+          svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,0")
+      .budda-section
+        section.reviews
+          .container.reviews__container
+            .reviews__desc
+              .reviews__header
+                .reviews__title Что обо мне говорят
+                .reviews__btns
+                  .reviews__btn
+                    a.reviews__btn-link
+                      +icon('arrow-down', 'reviews__btn-icon-left')
+                  .reviews__btn
+                    a.reviews__btn-link
+                      +icon('arrow-down', 'reviews__btn-icon-right')
+              .reviews__slider
+                ul.reviews__slider-list
+                  li.reviews__slider-item
+                    .reviews__slider-icon
+                      +icon('quote', 'reviews-quote')
+                    .reviews__block
+                      .reviews__text
+                        |Этот парень проходил обучение
+                        br 
+                        |веб-разработке не где-то, а в LoftSchool! 
+                        br 
+                        |4,5 месяца только самых тяжелых 
+                        br 
+                        |испытаний и бессонных ночей!
+                      .reviews__username-block
+                        .reviews__username
+                          .avatar
+                            +image('content/kov.jpg', "avatar-image")
+                        .reviews__username-desc
+                          .reviews__username-title Дмитрий Ковальчук
+                          .reviews__username-position основатель Loftschool
+                  li.reviews__slider-item
+                    .reviews__slider-icon
+                      +icon('quote', 'reviews-quote')
+                    .reviews__block
+                      .reviews__text
+                        |Этот парень проходил обучение
+                        br 
+                        |веб-разработке не где-то, а в LoftSchool! 
+                        br 
+                        |4,5 месяца только самых тяжелых 
+                        br 
+                        |испытаний и бессонных ночей!
+                      .reviews__username-block
+                        .reviews__username
+                          .avatar
+                            +image('content/sub.jpg', "avatar-image")
+                        .reviews__username-desc
+                          .reviews__username-title Владимир Сабанцев
+                          .reviews__username-position преподаватель
+        section.relations
+          .container.relations__container
+            .form__name Связаться со мной
+            .form__desc
+              form.form
+                  .form__row
+                      label.form__label
+                          .form__title Введите ваше имя
+                          input.form__input(placeholder = "Ковальчук Дмитрий" type="text"  required)
+                          +icon('user', 'form-user__icon')
+                      label.form__label
+                          .form__title Введите ваш email
+                          input.form__input(placeholder = "loftschool@study.com" type="email" required)
+                          +icon('envelope', 'form-user__icon')
+                  .form__row
+                      label.form__label
+                          .form__title Сообщение к письму
+                          textarea.form__textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
+                          +icon('message', 'form-mess__icon')
+                  button.form__btn-submit(type="submit") Отправить
+      footer.footer
+        .container.footer__container
+          .footer__date © 2019
+          .footer__user
+            .footer__username 
+              |Евгений
+              br 
+              |Струневский
+            .footer__username-text 
+              |Личный сайт 
+              br
+              |веб разработчика
+          .footer__desc
+            .footer__menu
+                ul.nav__list
+                  li.nav__item
+                    a.nav__link(href="#") Главная
+                  li.nav__item
+                    a.nav__link(href="#") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#") Навыки
+                  li.nav__item
+                    a.nav__link(href="#") Работы
+                  li.nav__item
+                    a.nav__link(href="#") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#") Связаться
+            .footer__desccontent
+              .footer__desccontent-left
+                .footer__desccontent-text
+                  |Этот сайт я сделал в рамках обучения 
+                  br
+                  |в Школе онлайн образования
+                .social.social_footer 
+                  .social__links
+                    - var icons = ["insta", "vk", "github"]
+                    ul.socials
+                      each item in icons
+                        li.socials__item
+                          a.socials__link
+                            +icon(item, "socials__icon_gray")
+              .footer__desccontent-right
+                .footer__desccontent-quote
+                  |Всегда пишите код так, будто сопровождать его будет 
+                  br
+                  |склонный к насилию психопат, который знает где вы живете
+                .footer__descontent-author
+                  |Martin Golding
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //- +image('content/user.jpg', 'user-pic')
         //- +icon('link', 'link-class')
         //- .icon-bg
