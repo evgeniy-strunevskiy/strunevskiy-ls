@@ -10,7 +10,7 @@ html(lang="ru")
   body
     .wrapper
       .welcome-section
-        section.hero
+        section.hero.fullscreen-section
           .container.hero__container
             header.header.hero__header
               .hero__logo
@@ -49,7 +49,8 @@ html(lang="ru")
                   |Струневский
             
             .hero__buttons
-              a.scroll-btn Скролл
+              a.scroll-btn 
+                .scroll-text Скролл
                 +icon('scroll', 'scroll-icon')  
         section.about
           .container.about__container
@@ -204,9 +205,9 @@ html(lang="ru")
                           +image('content/thumb_four.png', "slider-thumbs__pic-icon")
                 .slider__buttons
                   a.direction-btns
-                    +image('content/arrow-down.png', "direction-btns-pic")
+                    +icon('arrow-down', 'direction-btns-icon direction-btns-icon_up')
                   a.direction-btns
-                    +image('content/arrow-down.png', "direction-btns-pic")
+                    +icon('arrow-down', 'direction-btns-icon direction-btns-icon_down')
               .slider__info
                 .slider__tags
                   ul.tags
@@ -344,8 +345,8 @@ html(lang="ru")
                     - var icons = ["insta", "vk", "github"]
                     ul.socials
                       each item in icons
-                        li.socials__item
-                          a.socials__link
+                        li.socials__item.socials__item_footer
+                          a.socials__link.socials__link_footer
                             +icon(item, "socials__icon_gray")
               .footer__desccontent-right
                 .footer__desccontent-quote

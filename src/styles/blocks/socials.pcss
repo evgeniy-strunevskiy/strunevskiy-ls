@@ -5,11 +5,32 @@
 
 .socials__item {
   margin-right: 40px;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+
+  &_footer {
+    padding: 25px;
+    border: 1px solid #66686e;
+    border-radius: 50%;
+    position: relative;
+
+    &:hover {
+      border: 1px solid white;
+        .socials__link_footer {
+          .socials__icon_gray {
+            fill: white;
+          }
+        }
+    }
+  }
 
   &:last-child {
     margin-right: 0;
   }
 }
+
+
 
 .socials__icon {
   width: 25px;
@@ -18,19 +39,18 @@
   &:hover {
     fill: white;
   }
+}
 
-    &:active {
-    fill: orange;
-  }
+.socials__link_footer {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .socials__icon_gray {
   width: 25px;
   height: 25px;
   fill: #54565c;
-
-
-  &:hover {
-    fill: white;
-  }
 }

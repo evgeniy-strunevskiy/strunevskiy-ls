@@ -18,10 +18,17 @@
   right: 0;
 }
 
+.slider-thumbs__pic {
+  position: relative;
+}
+
 .slider-thumbs__pic-icon {
 
   &:hover {
-    border: 3px solid orange;
+    outline: 2px solid orange;
+    /* Пунктирная рамка */
+    outline-offset: -2px;
+    /* Выводим рамку внутри элемента */
   }
 }
 
@@ -114,8 +121,8 @@
 
 .slider__buttons {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -50px;
+  right: 0;
   display: flex;
 }
 
@@ -124,17 +131,27 @@
   width: 50px;
   height: 50px;
   background-color: #353e4e;
-  position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: orange;
   }
 }
 
-.direction-btns-pic {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.direction-btns-icon,
+.direction-btns-icon {
+  width: 10px;
+  height: 10px;
+
+  &_up {
+    transform: rotate(-90deg);
+    fill: #696f7b;
+  }
+
+  &_down {
+    transform: rotate(90deg);
+    fill: white;
+  }
 }
