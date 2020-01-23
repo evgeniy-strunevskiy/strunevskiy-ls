@@ -24,6 +24,19 @@
   padding-top: 65px;
 }
 
+.user-info {
+
+  @include desktop {
+    display: flex;
+  }
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .user-info__desc {
   opacity: 0.4;
   color: #464d62;
@@ -33,6 +46,11 @@
   line-height: 30px;
   margin-top: -25px;
   padding-bottom: 25px;
+
+  @include desktop {
+    display: flex;
+    /* margin-top: 0;  */
+  }
 }
 
 .user-info__username {

@@ -15,7 +15,7 @@
   padding-top: 50px;
 }
 
-.hero__log {
+.hero__logo {
   text-transform: uppercase;
 }
 
@@ -28,7 +28,10 @@
 
 .hero__menu {
   display: flex;
-  align-items: center
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .hero__links {
