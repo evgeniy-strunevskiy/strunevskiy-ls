@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 322px 0 ;
+  padding: 322px 0;
 }
 
 .hero__menu {
@@ -42,24 +42,33 @@
   padding-bottom: 100px;
 }
 
-.scroll-btn {
-  font-family: "Open Sans - Semibold";
-  font-size: 17px;
-  font-weight: bold;
+
+.scroll-text {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .scroll-icon {
   width: 30px;
   height: 30px;
   fill: #414c63;
+}
+
+.scroll-btn {
+  text-decoration: none;
+  font-family: "Open Sans - Semibold";
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 
   &:hover {
-    fill: red;
-  }
+    color: red;
 
-  &:active {
-    fill: orange;
+    .scroll-text {
+      .scroll-icon {
+        fill: red;
+      }
+    }
   }
 }

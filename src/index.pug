@@ -34,7 +34,7 @@ html(lang="ru")
                 ul.socials
                   each item in icons
                     li.socials__item
-                      a.socials__link(href="#" id="" target="_blank")
+                      a.socials__link(href="#")
                         +icon(item, "socials__icon")
 
             .hero__content
@@ -49,9 +49,9 @@ html(lang="ru")
                   |Струневский
             
             .hero__buttons
-              a.scroll-btn 
+              a.scroll-btn(href="#" id="" target="_blank") 
                 .scroll-text Скролл
-                +icon('scroll', 'scroll-icon')  
+                  +icon('scroll', 'scroll-icon')  
         section.about
           .container.about__container
             .about__content
