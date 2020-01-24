@@ -8,14 +8,31 @@
   display: flex;
   justify-content: center;
   padding-bottom: 250px;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .about__left {
   margin-right: 150px;
+
+  @include tablets {
+    margin-right: 100px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    padding-bottom: 55px;
+  }
 }
 
 .about__right {
   float: 1;
+}
+
+.about__welcome {
+  padding-bottom: 25px
 }
 
 .about__welcome-text {

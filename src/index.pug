@@ -71,8 +71,9 @@ html(lang="ru")
                         .user__cell 13 апреля
               
               .about__right
-                .about__welcome-text Привет, меня зовут
-                .about__username Евгений Струневский
+                .about__welcome 
+                  .about__welcome-text Привет, меня зовут
+                  h2.title Евгений Струневский
                 .about__desc 
                   |Я занимаюсь разработкой современных сайтов и приложений. 
                   br
@@ -91,16 +92,10 @@ html(lang="ru")
               polygon(points="1000,0 1000,100 0,100")
 
           .container.value__container  
-            
-            .value__bag
-              .value__bag-container
-                .value__bag-image
-                  +image('content/Рюкзак.png', "avatar__image")
-            
             .values__content
-              .values__title
-                .values__title-text Чем я могу быть полезен вам
-                .values__title-subtext
+              .values__desc
+                h2.title.title_value Чем я могу быть полезен вам
+                .values__desc-subtext
                   |Этот сайт я сделал в рамках обучения в Школе онлайн образования  
                   br
                   |LoftSchool. Чуть позже я освежу в нём свой контент. 
@@ -140,7 +135,7 @@ html(lang="ru")
                           .skill__title jquery и vue.js
 
 
-                li.skills-graphic__title Frontend
+                li.skills-graphic__title Workflow
                   ul.skills__row
                     li.skills__item
                       .skill
@@ -176,10 +171,16 @@ html(lang="ru")
                           linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
                               stop(offset="0%" stop-color='#4a00ed')
                               stop(offset="100%" stop-color='#9300e8') 
+                        
+            .value__bag
+              .value__bag-container
+                .value__bag-image
+                  +image('content/Рюкзак.png', "avatar__image")
+            
       section.works
         .container.works__container
           .works__content
-            .works__title Мои работы
+            h2.title Мои работы
             .slider
               .slider__display
                 .slider__display-pic
@@ -238,7 +239,7 @@ html(lang="ru")
           .container.reviews__container
             .reviews__desc
               .reviews__header
-                .reviews__title Что обо мне говорят
+                h2.title Что обо мне говорят
                 .reviews__btns
                   .reviews__btn
                     a.reviews__btn-link
@@ -288,7 +289,7 @@ html(lang="ru")
                           .reviews__username-position преподаватель
         section.relations
           .container.relations__container
-            .form__name Связаться со мной
+            h2.title Связаться со мной
             .form__desc
               form.form
                   .form__row

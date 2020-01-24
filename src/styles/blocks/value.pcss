@@ -1,32 +1,52 @@
 .value__container {
   display: flex;
+  justify-content: flex-end;
   position: relative;
+  padding: 10% 0;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.value__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .value__bag {
   position: absolute;
   top: 20%;
   left: 0;
+
+  @include desktop {
+    left: -11%;
+  }
+
+  @include tablets {
+    position: relative;
+    left: 0;
+  }
 }
 
-.values__content {
-  padding-left: 45%;
-  padding-bottom: 180px;
+.value__bag-container {
+
+  @include tablets {
+    padding: 30%;
+  }
 }
 
-.values__title-text {
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 150px;
-  padding-bottom: 60px;
+.values__desc {
+  padding: 0 25%;
+  text-align: left;
 }
 
-.values__title-subtext {
+.values__desc-subtext {
   opacity: 0.5;
   font-weight: 400;
   line-height: 30px;
   padding-bottom: 96px;
 }
-
-
-

@@ -1,5 +1,9 @@
 .skills-graphic {
   padding-left: 130px;
+
+  @include tablets {
+    padding-left: 0;
+  }
 }
 
 .skills-graphic__title {
@@ -17,7 +21,11 @@
 
 .skills__row {
   display: flex;
+  margin: 0 -15px;
+}
 
+.skills__item {
+  margin: 0 15px;
 }
 
 .skill {
@@ -27,6 +35,10 @@
   &__svg-shape {
     width: 168px;
     fill: transparent;
+
+    @include phones {
+      width: 134px;
+    }
   }
 
   &__svg-circle {
