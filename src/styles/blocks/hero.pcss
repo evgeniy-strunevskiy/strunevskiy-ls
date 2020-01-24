@@ -1,9 +1,13 @@
 .hero {
   min-width: 650px;
+
+  @include phones {
+    min-width: 300px;
+  }
 }
 
 .hero__container {
-  max-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,10 +17,15 @@
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
+  align-items: center;
 }
 
 .hero__logo {
   text-transform: uppercase;
+
+  @include tablets {
+    flex: 1;
+  }
 }
 
 .hero__content {
@@ -24,7 +33,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 322px 0;
 }
 
 .hero__menu {
@@ -33,17 +41,27 @@
   @include tablets {
     display: none;
   }
+
 }
 
 .hero__links {
   display: flex;
   align-items: center;
+  margin-right: 93px;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .hero__buttons {
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 5px;
+
+  @include phones {
+    display: none;
+  }
 }
 
 
