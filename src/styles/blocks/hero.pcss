@@ -47,7 +47,10 @@
 .hero__links {
   display: flex;
   align-items: center;
-  margin-right: 93px;
+
+  @include tablets {
+    margin-right: 93px;
+  }
 
   @include phones {
     display: none;
