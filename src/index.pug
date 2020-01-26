@@ -10,23 +10,21 @@ html(lang="ru")
   body
     .wrapper
       .parallax
-        .parallax__layer
+        .parallax__layer.parallax__layer_sky(data-speed="0.1")
           +image("parallax/Sky.png", "parallax__sky")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_mountain1(data-speed="0.25")
           +image("parallax/Mountain1.png", "parallax__mountain1")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_baloon(data-speed="0.35")
           +image("parallax/Baloon.png", "parallax__baloon")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_cloud(data-speed="0.38")
           +image("parallax/Cloud.png", "parallax__cloud")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_man(data-speed="0.45")
           +image("parallax/Man.png", "parallax__man")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_mountain2(data-speed="0.52")
           +image("parallax/Mountain2.png", "parallax__mountain2")          
-        .parallax__layer
+        .parallax__layer.parallax__layer_white(data-speed="0.56")
           +image("parallax/White.png", "parallax__white")          
         section.hero.fullscreen-section
-
-
           .container.hero__container
             header.header.hero__header
               .hero__logo
@@ -192,7 +190,7 @@ html(lang="ru")
               .value__bag-container
                 .value__bag-image
                   +image('content/Рюкзак.png', "avatar__image")
-            
+       
       section.works
         .container.works__container
           .works__content
