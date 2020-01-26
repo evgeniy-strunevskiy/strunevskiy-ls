@@ -9,8 +9,24 @@ html(lang="ru")
     title Portfolio | main page
   body
     .wrapper
-      .welcome-section
+      .parallax
+        .parallax__layer
+          +image("parallax/Sky.png", "parallax__sky")          
+        .parallax__layer
+          +image("parallax/Mountain1.png", "parallax__mountain1")          
+        .parallax__layer
+          +image("parallax/Baloon.png", "parallax__baloon")          
+        .parallax__layer
+          +image("parallax/Cloud.png", "parallax__cloud")          
+        .parallax__layer
+          +image("parallax/Man.png", "parallax__man")          
+        .parallax__layer
+          +image("parallax/Mountain2.png", "parallax__mountain2")          
+        .parallax__layer
+          +image("parallax/White.png", "parallax__white")          
         section.hero.fullscreen-section
+
+
           .container.hero__container
             header.header.hero__header
               .hero__logo
@@ -239,7 +255,7 @@ html(lang="ru")
           .container.reviews__container
             .reviews__desc
               .reviews__header
-                h2.title Что обо мне говорят
+                h2.title.title_reviews Что обо мне говорят
                 .reviews__btns
                   .reviews__btn
                     a.reviews__btn-link
@@ -250,46 +266,47 @@ html(lang="ru")
               .reviews__slider
                 ul.reviews__slider-list
                   li.reviews__slider-item
-                    .reviews__slider-icon
-                      +icon('quote', 'reviews-quote')
-                    .reviews__block
-                      .reviews__text
-                        |Этот парень проходил обучение
-                        br 
-                        |веб-разработке не где-то, а в LoftSchool! 
-                        br 
-                        |4,5 месяца только самых тяжелых 
-                        br 
-                        |испытаний и бессонных ночей!
-                      .reviews__username-block
-                        .reviews__username
-                          .avatar
-                            +image('content/kov.jpg', "avatar-image")
-                        .reviews__username-desc
-                          .reviews__username-title Дмитрий Ковальчук
-                          .reviews__username-position основатель Loftschool
-                  li.reviews__slider-item
-                    .reviews__slider-icon
-                      +icon('quote', 'reviews-quote')
-                    .reviews__block
-                      .reviews__text
-                        |Этот парень проходил обучение
-                        br 
-                        |веб-разработке не где-то, а в LoftSchool! 
-                        br 
-                        |4,5 месяца только самых тяжелых 
-                        br 
-                        |испытаний и бессонных ночей!
-                      .reviews__username-block
-                        .reviews__username
-                          .avatar
-                            +image('content/sub.jpg', "avatar-image")
-                        .reviews__username-desc
-                          .reviews__username-title Владимир Сабанцев
-                          .reviews__username-position преподаватель
+                    .reviews__slider-item-desc
+                      .reviews__slider-icon
+                        +icon('quote', 'reviews-quote')
+                      .reviews__block
+                        .reviews__text
+                          |Этот парень проходил обучение
+                          br 
+                          |веб-разработке не где-то, а в LoftSchool! 
+                          br 
+                          |4,5 месяца только самых тяжелых 
+                          br 
+                          |испытаний и бессонных ночей!
+                        .reviews__username-block
+                          .reviews__username
+                            .avatar
+                              +image('content/kov.jpg', "avatar-image")
+                          .reviews__username-desc
+                            .reviews__username-title Дмитрий Ковальчук
+                            .reviews__username-position основатель Loftschool
+                    .reviews__slider-item-desc
+                      .reviews__slider-icon
+                        +icon('quote', 'reviews-quote')
+                      .reviews__block
+                        .reviews__text
+                          |Этот парень проходил обучение
+                          br 
+                          |веб-разработке не где-то, а в LoftSchool! 
+                          br 
+                          |4,5 месяца только самых тяжелых 
+                          br 
+                          |испытаний и бессонных ночей!
+                        .reviews__username-block
+                          .reviews__username
+                            .avatar
+                              +image('content/sub.jpg', "avatar-image")
+                          .reviews__username-desc
+                            .reviews__username-title Владимир Сабанцев
+                            .reviews__username-position преподаватель                  
         section.relations
           .container.relations__container
-            h2.title Связаться со мной
+            h2.title.title_relations Связаться со мной
             .form__desc
               form.form
                   .form__row
@@ -309,19 +326,20 @@ html(lang="ru")
                   button.form__btn-submit(type="submit") Отправить
       footer.footer
         .container.footer__container
-          .footer__date © 2019
           .footer__user
-            .footer__username 
-              |Евгений
-              br 
-              |Струневский
-            .footer__username-text 
-              |Личный сайт 
-              br
-              |веб разработчика
+            .footer__date © 2019
+            .footer__username-desc
+              .footer__username 
+                |Евгений
+                br 
+                |Струневский
+              .footer__username-text 
+                |Личный сайт 
+                br
+                |веб разработчика
           .footer__desc
             .footer__menu
-                ul.nav__list
+                ul.nav__list.nav__list_footer
                   li.nav__item
                     a.nav__link(href="#") Главная
                   li.nav__item

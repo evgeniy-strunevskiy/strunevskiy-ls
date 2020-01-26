@@ -13,4 +13,24 @@
   @include tablets {
     font-size: 30px;
   }
+
+  @include phones {
+    font-size: 26px;
+  }
+
+  &_reviews {
+    padding-right: 122px;
+    padding-bottom: 100px;
+
+    @include phones {
+      padding-right: 0px;
+      padding-bottom: 26px;
+    }
+  }
+
+  &_relations {
+    @include tablets {
+      text-align: center;
+    }
+  }
 }

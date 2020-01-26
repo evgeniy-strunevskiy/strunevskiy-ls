@@ -1,10 +1,20 @@
 .relations__container {
   padding-bottom: 134px;
   padding-left: 70px;
+
+  @include tablets {
+    padding-left: 0px;
+  }
 }
 
 .form {
   width: 850px;
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    max-width: 260px;
+  }
 }
 
 .form__name {
@@ -17,6 +27,10 @@
 .form__row {
   display: flex;
   margin-bottom: 50px;
+
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .form__label {
@@ -79,6 +93,7 @@
   border: none;
   font-weight: 600;
   border-bottom: 2px solid black;
+  overflow: hidden;
 }
 
 .form__btn-submit {
@@ -91,6 +106,11 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+  align-self: flex-start;
+
+  @include tablets {
+    align-self: center;
+  }
 
   &:hover {
     background-image: linear-gradient(to right, #4a00ed 0%, #9300e8 100%);

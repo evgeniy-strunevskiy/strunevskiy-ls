@@ -1,5 +1,18 @@
 .nav__list {
   display: flex;
+
+  &_footer {
+    @include tablets {
+      flex-wrap: wrap;
+      margin: -10px 0;
+
+      .nav__item  {
+        @include tablets {
+          padding: 10px 0;
+        } 
+      }
+    }
+  }
 }
 
 .nav__item {

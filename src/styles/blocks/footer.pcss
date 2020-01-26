@@ -7,18 +7,42 @@
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__date {
+  width: 226px;
   opacity: 0.1;
   font-family: "Open Sans - Semibold";
   font-size: 48px;
   font-weight: 400;
   padding-right: 60px;
+
+  @include desktop {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
 }
 
 .footer__user {
   padding-right: 140px;
+  display: flex;
+
+  @include desktop {
+    flex-direction: column;
+  }
+
+  @include tablets {
+    padding-right: 77px;
+  }
+
+  @include phones {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
 }
 
 .footer__username {
@@ -42,10 +66,19 @@
 .footer__desccontent {
   display: flex;
   align-items: flex-start;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__desccontent-left {
   padding-right: 100px;
+
+  @include tablets {
+    padding-right: 0;
+    padding-bottom: 60px;
+  }
 }
 
 .footer__desccontent-text {
