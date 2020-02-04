@@ -21,18 +21,19 @@
 .about__left {
   margin-right: 150px;
 
+  @include laptop {
+    margin-right: 80px;
+    flex: 1;
+  }
+
   @include tablets {
-    margin-right: 100px;
+    margin-right: 80px;
   }
 
   @include phones {
     margin-right: 0;
     padding-bottom: 55px;
   }
-}
-
-.about__right {
-  float: 1;
 }
 
 .about__welcome {

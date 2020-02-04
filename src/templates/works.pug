@@ -1,0 +1,57 @@
+section.works
+  .container.works__container
+    .works__content
+      h2.title Мои работы
+      .slider
+        .slider__display
+          .slider__display-pic
+            +image('content/site-phone.jpg', ".slider__display-pic-icon")
+          .slider__display-thumbs
+            ul.slider-thumbs
+              li.slider-thumbs__link
+                a.slider-thumbs__link
+                  .slider-thumbs__pic
+                    +image('content/thumb_one.png', "slider-thumbs__pic-icon")
+              li.slider-thumbs__link
+                a.slider-thumbs__link
+                  .slider-thumbs__pic
+                    +image('content/thumb_two.png', "slider-thumbs__pic-icon")
+              li.slider-thumbs__link
+                a.slider-thumbs__link
+                  .slider-thumbs__pic
+                    +image('content/thumb_three.png', "slider-thumbs__pic-icon")
+              li.slider-thumbs__link
+                a.slider-thumbs__link
+                  .slider-thumbs__pic
+                    +image('content/thumb_four.png', "slider-thumbs__pic-icon")
+          .slider__buttons
+            a.direction-btns
+              +icon('arrow-down', 'direction-btns-icon direction-btns-icon_up')
+            a.direction-btns
+              +icon('arrow-down', 'direction-btns-icon direction-btns-icon_down')
+        .slider__info
+          .slider__tags
+            ul.tags
+              li.tags__item Html
+              li.tags__item css
+              li.tags__item javascript
+          .slider__info-text
+            h3.slider__info-title
+              |Сайт школы 
+              |образования
+            .slider__info-desc
+              |Этот парень проходил обучение 
+              br
+              |веб-разработке не где-то, а в LoftSchool! 
+              br
+              |2 месяца только самых тяжелых 
+              br
+              |испытаний и бессонных ночей!
+          .slider__info-btns
+            +icon('link', 'slider__info-link')
+            a.iconend-link Посмотреть сайт
+  .triangles.triangles_budda
+    svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+      polygon(points="0,0 1000,0 1000,100")
+    svg.triangle__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
+      polygon(points="0,0 0,100 1000,0")
