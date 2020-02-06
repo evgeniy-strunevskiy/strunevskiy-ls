@@ -13,19 +13,8 @@ footer.footer
           |веб разработчика
     .footer__desc
       .footer__menu
-          ul.nav__list.nav__list_footer
-            li.nav__item
-              a.nav__link(href="#") Главная
-            li.nav__item
-              a.nav__link(href="#") Обо мне
-            li.nav__item
-              a.nav__link(href="#") Навыки
-            li.nav__item
-              a.nav__link(href="#") Работы
-            li.nav__item
-              a.nav__link(href="#") Отзывы
-            li.nav__item
-              a.nav__link(href="#") Связаться
+        +nav("nav", [{link: '#hero', title: 'Главная'}, {link: '#about', title: 'Обо мне'}, {link: '#value', title: 'Навыки'}, {link: '#works', title: 'Работы'}, {link: '#reviews', title: 'Отзывы'}, {link: '#relations', title: 'Связаться'}])
+
       .footer__desccontent
         .footer__desccontent-left
           .footer__desccontent-text

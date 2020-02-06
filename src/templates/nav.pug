@@ -1,7 +1,15 @@
-mixin nav(className, items)
+mixin nav(className, items, activeItem)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
-      each item in items
-        li(class=`${className}__item` href=`${item.link}`)= item.title
+      each item, ndx in items
+        li(class=`${className}__item` + ( (ndx === activeItem) ? ` ${className}__item_active` : '') href=`${item.link}`)= item.title
 
-+nav("nav", [{link: '#hero', title: 'Главная'}, {link: '#about', title: 'Обо мне'}, {link: '#value', title: 'Навыки'}, {link: '#works', title: 'Работы'}, {link: '#reviews', title: 'Отзывы'}, {link: '#relations', title: 'Связаться'}])
++nav("nav", 
+  [
+    {link: '#hero', title: 'Главная'}, 
+    {link: '#about', title: 'Обо мне'}, 
+    {link: '#value', title: 'Навыки'}, 
+    {link: '#works', title: 'Работы'}, 
+    {link: '#reviews', title: 'Отзывы'}, 
+    {link: '#relations', title: 'Связаться'}
+  ], 0)

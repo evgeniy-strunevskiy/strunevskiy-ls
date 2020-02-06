@@ -12,9 +12,34 @@
   }
 }
 
-.value__content {
+.values__content {
+  position: relative;
   display: flex;
   flex-direction: column;
+  &::after {
+    content: '';
+    width: 400px;
+    height: 627px;
+    background-image: url(~images/content/Рюкзак.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translateY( -50%);
+
+    @include tablets {
+      position: relative;
+      left: 50%;
+      transform: translateX( -50%);
+      width: 200px;
+      height: 300px;
+    }
+    
+  }
 }
 
 .value__bag {
@@ -40,8 +65,8 @@
 }
 
 .values__desc {
-  padding: 0 25%;
-  text-align: left;
+  max-width: 585px;
+
 }
 
 .values__desc-subtext {

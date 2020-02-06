@@ -1,12 +1,13 @@
 .slider__display-pic {
-  width: 977px;
-  height: 549px;
+  max-width: 977px;
+  max-height: 549px;
+}
 
-  @include desktop {
-    width: 623px;
-    height: 353px;
-  }
-
+.slider__display-pic-icon,
+.slider-thumbs__pic-icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .slider {
@@ -33,10 +34,6 @@
     font-weight: 900;
     line-height: 48px;
     color: #e6e6e6;
-
-    @include tablets {
-      right: -80px;
-    }
   }
 
   @include tablets {
@@ -54,12 +51,6 @@
 
   @include desktop {
     height: 300px;
-    bottom: 6%;
-  }
-
-  @include tablets {
-    bottom: 22%;
-    right: 13%;
   }
 }
 
@@ -170,19 +161,6 @@
   bottom: -50px;
   right: 0;
   display: flex;
-
-  @include desktop {
-    bottom: -7%
-  }
-
-  @include tablets {
-    bottom: 11%;
-    right: 13%;
-  }
-
-  @include phones {
-    bottom: 11%;
-  }
 }
 
 
