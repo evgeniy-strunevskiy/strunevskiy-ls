@@ -1,3 +1,4 @@
+
 var parallax = (function () {
   var sky = document.querySelector('.parallax__layer_sky')
   var mountainONe = document.querySelector('.parallax__layer_mountain1')
@@ -6,6 +7,14 @@ var parallax = (function () {
   var man = document.querySelector('.parallax__layer_man')
   var mountainTwo = document.querySelector('.parallax__layer_mountain2')
   var white = document.querySelector('.parallax__layer_white')
+
+  //Переменные для будды
+  var skyBuddha = document.querySelector('.parallax__layer_sky-buddha')
+  var mountainONeBuddha = document.querySelector('.parallax__layer_mountain1-buddha')
+  var buddha = document.querySelector('.parallax__layer_buddha')
+  var cloudBuddha = document.querySelector('.parallax__layer_cloud-buddha')
+  var whiteBuddha = document.querySelector('.parallax__layer_white-buddha')
+
 
   return {
     move: function (block, windowScroll, strafeAmount) {
@@ -27,6 +36,13 @@ var parallax = (function () {
       this.move(man, wScroll, 50);
       this.move(mountainTwo, wScroll, 60);
       this.move(white, wScroll, 70);
+
+      //Секция будда
+      this.move(skyBuddha, wScroll, 10);
+      this.move(mountainONeBuddha, wScroll, 20);
+      this.move(buddha, wScroll, 30);
+      this.move(cloudBuddha, wScroll, 40);
+      this.move(whiteBuddha, wScroll, 70);
     }
 
   }
@@ -39,5 +55,5 @@ window.onscroll = function () {
 
   parallax.init(wScroll);
 
-  console.log(wScroll);
+  console.log(buddha);
 }
